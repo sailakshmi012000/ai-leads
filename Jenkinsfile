@@ -19,7 +19,7 @@ pipeline{
                     sh "scp -o StrictHostKeyChecking=no target/ai-leads.war ec2-user@172.31.38.170:/opt/tomcat9/webapps"
                     sh "ssh ec2-user@172.31.38.170 /opt/tomcat9/bin/shutdown.sh"
                     sh "ssh ec2-user@172.31.38.170 /opt/tomcat9/bin/startup.sh"
-                    //this is to test pollscm
+                    //this is to testing pollscm
                 }
             }
         }
