@@ -1,38 +1,29 @@
-pipeline {
+pipeline{
     agent any
-
-     stages {
-        stage('Maven Build') {
-            when {
-                branch "develop"
-            }
-            steps {
-               echo "Maven build..."
-            }
-        }
-        stage('Dev Deploy') {
-            when {
-                branch "develop"
-            }
-            steps {
-               echo "Deploying to dev"
+    stages{
+        stage('git-checkout'){
+         when{
+            branch "develop"
+          }
+         steps{
+         echo "welcome to develop branch"
             }
         }
-        stage('Test Deploy') {
-            when {
+        stage('mvn build'){
+            when{
                 branch "test"
             }
-            steps {
-               echo "Deploying to Test"
+            steps{
+                echo "welcome to test branch"
             }
         }
-        stage('Prod Deploy') {
-            when {
+        stage('production'){
+            when{
                 branch "main"
             }
-            steps {
-               echo "Deploying to Production"
+            steps{
+                echo "welcome to mains branch"
             }
         }
     }
-}
+}  
