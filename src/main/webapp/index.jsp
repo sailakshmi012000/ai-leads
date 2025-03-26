@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2 style="color: blue;">Java Home Jenkins Pipeline</h2>
+<h2 style="color: black;">CHAITANYA GOGULA</h2>
 </body>
 </html>
